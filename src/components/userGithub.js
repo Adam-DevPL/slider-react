@@ -14,4 +14,7 @@ export default [
     {
         user: 'martinfowler',
     },
+    {
+        user: 'adam-devpl',
+    },
 ]

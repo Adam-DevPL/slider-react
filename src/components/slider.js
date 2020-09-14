@@ -18,12 +18,12 @@ const Slider = ({ slides }) => {
     const [isLoading, setIsLoading] = useState(false);
 
     const goToNext = () => {
-        setCurr(curr === 4 ? 0 : curr + 1);
+        setCurr(curr === slides.length ? 0 : curr + 1);
         setUser(slides[curr].user);
     }
 
     const goToPrev = () => {
-        setCurr(curr === 0 ? 4 : curr - 1);
+        setCurr(curr === 0 ? slides.length - 1 : curr - 1);
         setUser(slides[curr].user);
     }
 
