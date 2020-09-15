@@ -1,7 +1,11 @@
 
 # React Slider
 
+<<<<<<< HEAD
 Simple avatar slider with github profiles. Version 1.01.
+=======
+Simple avatar slider with github profiles.
+>>>>>>> 379057fb71a66ae9005212d163f55f39ea113af5
 
 ## How to use it?
 
