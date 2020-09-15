@@ -1,12 +1,11 @@
-![cover](https://cotenfrontend.pl/img/cover.png)
 
-# WTF Webpack Starter Kit 
+# React Slider
 
-Simple toolkit for your static websites development.
+Simple avatar slider with github profiles. Version 1.01.
 
 ## How to use it?
 
-Click on `Use this template` button to generate a new repository based on this starter kit. After that clone it to your computer, go to the project directory in console and type `npm install`.
+There are 2 buttons to move slides into 2 directions: Next and Previous.
 
 ## Available scripts
 
