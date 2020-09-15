@@ -11,20 +11,27 @@ const Slider = ({ slides }) => {
 
 
 
-    const [curr, setCurr] = useState(1);
-    const [user, setUser] = useState(slides[0].user);
+    const [curr, setCurr] = useState(0);
+    const [user, setUser] = useState(slides[curr].user);
     const [avatar, setAvatar] = useState("");
     const [isError, setIsError] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
 
     const goToNext = () => {
-        setCurr(curr === slides.length ? 0 : curr + 1);
-        setUser(slides[curr].user);
+
+        let temp = (curr === slides.length - 1) ? 0 : (curr + 1);
+        setCurr(temp);
+        setUser(slides[temp].user);
+
+
     }
 
     const goToPrev = () => {
-        setCurr(curr === 0 ? slides.length - 1 : curr - 1);
-        setUser(slides[curr].user);
+
+        let temp = (curr === 0) ? slides.length - 1 : (curr - 1);
+        setCurr(temp);
+        setUser(slides[temp].user);
+
     }
 
     useEffect(() => {
@@ -41,6 +48,7 @@ const Slider = ({ slides }) => {
                     setIsError(true);
                 } else {
                     setData(data);
+
                 }
 
             } catch (error) {
@@ -49,8 +57,6 @@ const Slider = ({ slides }) => {
             }
 
             setIsLoading(false);
-
-            console.log(isError, isLoading);
         }
 
         fetchData();
@@ -77,7 +83,6 @@ const Slider = ({ slides }) => {
                 ) : (
                         <img className="image" src={checkError()} />
                     )}
-
             </div>
             <button className="buttonPrev" onClick={goToPrev}>Previous</button>
             <button className="buttonNext" onClick={goToNext}>Next</button>
